@@ -1,25 +1,45 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 const NavHeader = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+
+            if (window.scrollY > 30) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
-        <nav className="fixed top-0 left-0 w-full bg-white/0 rounded-lg shadow-lg px-4 py-4 sm:px-8 lg:px-20 flex items-center justify-between z-50">
+        <nav
+            className={`fixed top-0 left-0 w-full bg-white/0 rounded-lg shadow-lg px-4 py-4 sm:px-8 lg:px-20 flex items-center justify-between z-50 ${isScrolled
+                ? "bg-white shadow-md border-b border-gray-300"
+                : "bg-transparent shadow-md border-b border-gray-300"
+                }`}
+        >
             <div className="flex items-center gap-2">
-                <span className="text-3xl font-light text-[#1e1e1e] leading-loose">
+                <span className="text-3xl font-light text-black leading-loose">
                     Eunice
                 </span>
-                <span className="text-xl font-normal text-[#1e1e1e] font-['Lato'] leading-loose">
+                <span className="text-xl font-normal text-black font-['Lato'] leading-loose">
                     {' '}
                 </span>
-                <span className="text-3xl font-bold text-[#1e1e1e] leading-loose">
+                <span className="text-3xl font-bold text-black leading-loose">
                     Makeover
                 </span>
             </div>
             <div className="lg:flex items-center gap-4 hidden">
                 <a
                     href="#"
-                    className="text-base font-normal text-[#1e1e1e] leading-relaxed tracking-tight"
+                    className="text-base font-normal text-black leading-relaxed tracking-tight"
                 >
                     Pricing
                 </a>
@@ -28,7 +48,7 @@ const NavHeader = () => {
                 </span>
                 <a
                     href="#"
-                    className="text-base font-normal text-[#1e1e1e] leading-relaxed tracking-tight"
+                    className="text-base font-normal text-black leading-relaxed tracking-tight"
                 >
                     Services
                 </a>
@@ -37,12 +57,12 @@ const NavHeader = () => {
                 </span>
                 <a
                     href="#"
-                    className="text-base font-normal text-[#1e1e1e] leading-relaxed tracking-tight"
+                    className="text-base font-normal text-black leading-relaxed tracking-tight"
                 >
                     Contact us
                 </a>
             </div>
-            <button className="h-10 px-4 rounded-2xl border border-black/25 text-[#1e1e1e] text-base font-normal leading-relaxed tracking-tight lg:inline-block hidden">
+            <button className="h-10 px-4 rounded-2xl border border-black/25 text-black text-base font-normal leading-relaxed tracking-tight lg:inline-block hidden">
                 Book a session
             </button>
 
@@ -80,7 +100,7 @@ const NavHeader = () => {
                         <li>
                             <a
                                 href="#"
-                                className="text-base font-normal text-[#1e1e1e] leading-relaxed tracking-tight block"
+                                className="text-base font-normal text-black leading-relaxed tracking-tight block"
                             >
                                 Pricing
                             </a>
@@ -88,7 +108,7 @@ const NavHeader = () => {
                         <li>
                             <a
                                 href="#"
-                                className="text-base font-normal text-[#1e1e1e] leading-relaxed tracking-tight block"
+                                className="text-base font-normal text-black leading-relaxed tracking-tight block"
                             >
                                 Services
                             </a>
@@ -96,13 +116,13 @@ const NavHeader = () => {
                         <li>
                             <a
                                 href="#"
-                                className="text-base font-normal text-[#1e1e1e] leading-relaxed tracking-tight block"
+                                className="text-base font-normal text-black leading-relaxed tracking-tight block"
                             >
                                 Contact us
                             </a>
                         </li>
                         <li>
-                            <button className="h-10 px-4 rounded-2xl border border-black/25 text-[#1e1e1e] text-base font-normal leading-relaxed tracking-tight w-full">
+                            <button className="h-10 px-4 rounded-2xl border border-black/25 text-black text-base font-normal leading-relaxed tracking-tight w-full">
                                 Book a session
                             </button>
                         </li>
