@@ -95,7 +95,7 @@ const NavHeader = () => {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="lg:hidden absolute top-full z-40 left-0 w-full bg-black shadow-md rounded-md mt-2">
+                <div className="lg:hidden absolute top-full z-40 left-0 w-full bg-white shadow-md rounded-md mt-2">
                     <ul className="py-4 px-6 space-y-4">
                         <li>
                             <a
