@@ -4,7 +4,7 @@ const NavHeader = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <nav className="bg-white/0 rounded-lg shadow-lg px-4 py-4 sm:px-8 lg:px-20 flex items-center justify-between z-10">
+        <nav className="fixed top-0 left-0 w-full bg-white/0 rounded-lg shadow-lg px-4 py-4 sm:px-8 lg:px-20 flex items-center justify-between z-50">
             <div className="flex items-center gap-2">
                 <span className="text-3xl font-light text-[#1e1e1e] leading-loose">
                     Eunice
