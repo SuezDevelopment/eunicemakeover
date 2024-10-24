@@ -17,25 +17,33 @@ const MeSection = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                 />
-                <motion.img
-                    className="w-full max-w-80 h-64 md:h-full rounded-tr-3xl rounded-bl-3xl shadow-lg transform transition-transform hover:scale-105 contain"
-                    src={RedMid.src}
-                    alt="Eunice Makeover 2"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
+
+                <motion.div
+                    className='w-full max-w-80'
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                />
-                <motion.img
-                    className="w-full max-w-80 h-64 md:h-full rounded-tr-3xl rounded-bl-3xl shadow-lg transform transition-transform hover:scale-105"
-                    src={RedMid.src}
-                    alt="Eunice Makeover 3"
+                >
+                    <img src={RedMid.src} alt="" className="w-full max-w-80 h-64 upside-down md:h-full rounded-tr-3xl rounded-bl-3xl shadow-lg transform transition-transform filter grayscale upside-down" />
+
+                </motion.div>
+
+
+                <motion.div
+                    className='w-full max-w-80'
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.8 }}
-                />
+                >
+                    <img src={RedMid.src} alt="Eunice Makeover 3" className=" invert h-64 md:h-full upside-down rounded-tr-3xl rounded-bl-3xl shadow-lg transform transition-transform hover:scale-105 filter my-image" />
+
+                </motion.div>
             </motion.div>
             <motion.div
                 className='flex flex-col justify-center items-center text-black py-12 gap-8 font-[family-name:var(--font-geist-mali)]'
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.9 }}
             >
                 <span className='text-base font-light text-center max-w-[33rem]'>Makeup is my art, where creativity meets precision, all while delivering exceptional customer service.</span>
                 <span className='font-semibold'>-Eunice</span>

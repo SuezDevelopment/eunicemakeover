@@ -19,3 +19,20 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.my-image {
+  filter: sepia(0.8) hue-rotate(10deg);
+}
+
+.upside-down {
+  transform: rotate(180deg) scaleX(-1);
+}
+
+#invert {
+  transform: scaleX(-1);
+}
+
+.invert {
+  transform: scaleX(-1);
+}
