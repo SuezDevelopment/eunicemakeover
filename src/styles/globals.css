@@ -21,6 +21,12 @@ body {
 }
 
 
+nav {
+  background-color: #fff;
+  padding: 10px;
+}
+
+
 .my-image {
   filter: sepia(0.8) hue-rotate(10deg);
 }

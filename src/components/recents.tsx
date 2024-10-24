@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { p } from 'framer-motion/client';
 import Recent, { useState, useRef, useEffect } from 'react';
 
@@ -51,7 +52,14 @@ const RecentWorksSection = () => {
                     ref={containerRef}
                 >
                     {imageUrls.map((imageUrl, index) => (
-                        <p key={index} className='text-black'>{imageUrl}</p>
+                        <motion.div
+                            className='w-full max-w-80'
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8, delay: 0.8 }}
+                        >
+                            <img src={imageUrl} alt="Eunice Makeover 3" className="h-80 md:h-full rounded-tl-3xl rounded-br-3xl shadow-lg transform transition-transform" />
+                        </motion.div>
                     ))}
                 </div>
             </div>
