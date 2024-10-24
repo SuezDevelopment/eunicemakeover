@@ -16,7 +16,7 @@ const geistMono = localFont({
 export default function Home() {
   return (
     <div
-      className={`${geistSans.variable} ${geistMono.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-mono)]`}
     >
        <NavHeader />
     </div>
