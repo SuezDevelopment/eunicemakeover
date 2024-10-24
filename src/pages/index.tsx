@@ -4,6 +4,9 @@ import NavHeader from "@/components/navHeader";
 import HeroSection from "@/components/hero";
 import ServicesSection from "@/components/services";
 import MeSection from "@/components/me";
+import CustomerReviewsSection from "@/components/reviews";
+import RecentWorksSection from "@/components/recents";
+import GetInTouchSection from "@/components/getintouch";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,12 +28,16 @@ const geistMali = localFont({
 export default function Home() {
   return (
     <div
-      className={`${geistSans.variable} ${geistMono.variable} ${geistMali.variable} font-[family-name:var(--font-geist-mono)]`}
+      className={`${geistSans.variable} ${geistMono.variable} ${geistMali.variable} font-[family-name:var(--font-geist-mono)] md:px-12 px-2 mb-12`}
     >
        <NavHeader />
        <HeroSection />
        <ServicesSection />
        <MeSection />
+       <CustomerReviewsSection />
+       <RecentWorksSection />
+
+       <GetInTouchSection />
     </div>
   );
 }
