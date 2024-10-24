@@ -24,10 +24,9 @@ const MeSection = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                    <img src={RedMid.src} alt="" className="w-full max-w-80 h-64 upside-down md:h-full rounded-tr-3xl rounded-bl-3xl shadow-lg transform transition-transform filter grayscale upside-down" />
+                    <img src={RedMid.src} alt="Eunice Makeover 2" className="w-full max-w-80 h-64 upside-down md:h-full rounded-tr-3xl rounded-bl-3xl shadow-lg transform transition-transform filter grayscale upside-down" />
 
                 </motion.div>
-
 
                 <motion.div
                     className='w-full max-w-80'
@@ -36,7 +35,6 @@ const MeSection = () => {
                     transition={{ duration: 0.8, delay: 0.8 }}
                 >
                     <img src={RedMid.src} alt="Eunice Makeover 3" className=" invert h-64 md:h-full upside-down rounded-tr-3xl rounded-bl-3xl shadow-lg transform transition-transform hover:scale-105 filter my-image" />
-
                 </motion.div>
             </motion.div>
             <motion.div
