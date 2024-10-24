@@ -9,14 +9,15 @@ const MeSection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
             >
-                <motion.img
-                    className="w-full max-w-80 h-64 md:h-full rounded-tl-3xl rounded-br-3xl shadow-lg transform transition-transform hover:scale-105"
-                    src={RedMid.src}
-                    alt="Eunice Makeover 1"
-                    initial={{ opacity: 0, x: -20 }}
+
+                <motion.div
+                    className='w-full max-w-80'
+                    initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                />
+                    transition={{ duration: 0.8, delay: 0.8 }}
+                >
+                    <img src={RedMid.src} alt="Eunice Makeover 3" className="h-64 md:h-full rounded-tl-3xl rounded-br-3xl shadow-lg transform transition-transform" />
+                </motion.div>
 
                 <motion.div
                     className='w-full max-w-80'
@@ -24,7 +25,7 @@ const MeSection = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                    <img src={RedMid.src} alt="Eunice Makeover 2" className="w-full max-w-80 h-64 upside-down md:h-full rounded-tr-3xl rounded-bl-3xl shadow-lg transform transition-transform filter grayscale upside-down" />
+                    <img src={RedMid.src} alt="Eunice Makeover 2" className="w-full max-w-80 h-64 upside-down md:h-full rounded-tl-3xl rounded-br-3xl shadow-lg transform transition-transform filter grayscale" />
 
                 </motion.div>
 
@@ -34,7 +35,7 @@ const MeSection = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.8 }}
                 >
-                    <img src={RedMid.src} alt="Eunice Makeover 3" className=" invert h-64 md:h-full upside-down rounded-tr-3xl rounded-bl-3xl shadow-lg transform transition-transform hover:scale-105 filter my-image" />
+                    <img src={RedMid.src} alt="Eunice Makeover 3" className=" invert h-64 md:h-full upside-down rounded-tl-3xl rounded-br-3xl shadow-lg transform transition-transform filter my-image" />
                 </motion.div>
             </motion.div>
             <motion.div
