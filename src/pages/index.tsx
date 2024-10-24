@@ -1,6 +1,7 @@
 import Image from "next/image";
 import localFont from "next/font/local";
 import NavHeader from "@/components/navHeader";
+import HeroSection from "@/components/hero";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -19,6 +20,7 @@ export default function Home() {
       className={`${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-mono)]`}
     >
        <NavHeader />
+       <HeroSection />
     </div>
   );
 }

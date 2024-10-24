@@ -4,7 +4,7 @@ const NavHeader = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <nav className="bg-white/0 rounded-lg px-4 py-4 sm:px-8 lg:px-20 flex items-center justify-between">
+        <nav className="bg-white/0 rounded-lg shadow-lg px-4 py-4 sm:px-8 lg:px-20 flex items-center justify-between z-10">
             <div className="flex items-center gap-2">
                 <span className="text-3xl font-light text-[#1e1e1e] leading-loose">
                     Eunice
@@ -49,7 +49,9 @@ const NavHeader = () => {
             {/* Mobile Menu Button */}
             <button
                 className="lg:hidden"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                onClick={() => {
+                    setIsMenuOpen(!isMenuOpen)
+                }}
             >
                 <svg
                     className="w-9 h-9"
