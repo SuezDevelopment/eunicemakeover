@@ -7,7 +7,7 @@ const NavHeader = () => {
     useEffect(() => {
         const handleScroll = () => {
 
-            if (window.scrollY > 30) {
+            if (window.scrollY > 10) {
                 setIsScrolled(true);
             } else {
                 setIsScrolled(false);
@@ -20,9 +20,9 @@ const NavHeader = () => {
 
     return (
         <nav
-            className={`fixed top-0 left-0 w-full bg-white/0 rounded-lg shadow-lg px-4 py-4 sm:px-8 lg:px-20 flex items-center justify-between z-50 ${isScrolled
-                ? "bg-white shadow-md border-b border-gray-300"
-                : "bg-transparent shadow-md border-b border-gray-300"
+            className={`fixed top-0 left-0 w-full rounded-lg shadow-lg px-4 py-4 sm:px-8 lg:px-20 flex items-center justify-between z-10 ${isScrolled
+                ? "bg-red shadow-lg border-b border-red-300"
+                : "bg-transparent shadow-lg border-b border-gray-300"
                 }`}
         >
             <div className="flex items-center gap-2">
